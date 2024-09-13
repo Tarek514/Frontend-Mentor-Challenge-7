@@ -1,0 +1,162 @@
+body {
+  font-family: "Barlow Semi Condensed";
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.daniel {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.jonathan {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.jeanette {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.patrick {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  margin-left: -10px;
+}
+
+.kira {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+[class*="testimonial"] {
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.daniel {
+  height: 250px;
+  width: 500px;
+}
+
+.jonathan {
+  height: 250px;
+  width: 200px;
+}
+
+.jeanette {
+  height: 200px;
+  width: 200px;
+}
+
+.patrick {
+  height: 200px;
+  width: 500px;
+}
+
+.kira {
+  height: 510px;
+  width: 200px;
+}
+
+[class*="testimonial"]:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 12px 12px rgba(0, 0, 0, 0.22);
+}
+
+.daniel {
+  position: relative;
+  background-image: url("/images/bg-pattern-quotation.svg");
+  background-position: top right 20px;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 30px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.text-content {
+  margin-left: 10px;
+}
+
+.text-content p {
+  margin: 0;
+}
+
+.name {
+  font-size: 13px;
+}
+
+.subText {
+  font-size: 13px;
+}
+
+@media (max-width: 375px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+  }
+
+  .daniel {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+  }
+
+  .jonathan {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    width: 100%;
+  }
+
+  .jeanette {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    width: 100%;
+  }
+
+  .patrick {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    width: 100%;
+  }
+
+  .kira {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    width: 100%;
+  }
+
+  [class*="testimonial"] {
+    height: auto;
+  }
+}
