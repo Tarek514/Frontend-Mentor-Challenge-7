@@ -87,7 +87,7 @@ body {
 
 .daniel {
   position: relative;
-  background-image: url("/images/bg-pattern-quotation.svg");
+  background-image: URL("./images/bg-pattern-quotation.svg");
   background-position: top right 20px;
   background-repeat: no-repeat;
   background-size: 100px 100px;
